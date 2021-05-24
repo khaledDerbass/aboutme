@@ -1,0 +1,27 @@
+body
+{font-family: Arial; font-size: 1em;  color: black;margin-left:1%;  
+    background-color:rgba(245, 245, 245, 0.856); border-color:white;
+}
+
+
+div#navbar
+{ margin-left: 5%;
+margin-bottom: 10%;
+border-left: hidden; border-right: hidden;
+position:relative; width: 100%;
+}
+div#navbar ul {list-style-type: none;}
+div#navbar ul li
+{
+ border-top: hidden;
+border-bottom: hidden;
+margin-right: 2em; width: 25%; float: left;  margin-left: 5.5%;
+}
+div#navbar ul li a {text-decoration: none;
+display: block; padding: 0.5em;}
+
+footer{
+    
+  text-align: center;
+  display: block;
+}
