@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 let userName=prompt('Enter your name, pLease!');
         console.log("Greeting, "+userName+" you are welcome!");
 
@@ -34,7 +34,7 @@ function correctAnswer(UserAns)
       {
         alert("Please answer the following Questions **(Y/N)** ONLY");
         while (!(UserAns.toUpperCase == 'Y' || UserAns.toUpperCase == 'N'))
-        correctAnswer(UserAns)
+        correctAnswer(UserAns);
       }
 }
  
