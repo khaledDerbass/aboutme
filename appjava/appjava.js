@@ -1,7 +1,7 @@
 'use strict';
 let userName=prompt('Enter your name, pLease!');
         console.log("Greeting, "+userName+" you are welcome!");
-
+let count=0;
 alert("Please answer the following Questions (Y/N)");
 
 
@@ -16,8 +16,12 @@ correctAnswer(type);
 let branch=prompt('Do you have another branches ?');
 correctAnswer(branch);
 
+
+
 let feed=prompt('Do you like the variants in our products ?');
 correctAnswer(feed);      
+
+
 
 let feedback=prompt('Do you have any comment to improve our business ?');
 correctAnswer(feedback);
@@ -28,14 +32,38 @@ document.write(RateMe());
 
 function correctAnswer(UserAns)
 {
+
   if (UserAns.toUpperCase == 'Y' || UserAns.toUpperCase == 'N')
-      console.log("Thanks for answer");
+      {
+        console.log("Thanks for answer");
+        count++;
+      }
       else
       {
         alert("Please answer the following Questions **(Y/N)** ONLY");
-        while (!(UserAns.toUpperCase == 'Y' || UserAns.toUpperCase == 'N'))
-        correctAnswer(UserAns);
-      }
+        while (!(UserAns.toUpperCase == 'Y' || UserAns.toUpperCase == 'N')){      
+  switch (count) {
+        case 1:{
+          UserAns=prompt('Is it the first time you visit us ?'); count++;
+           break;}
+    
+        case 2:{
+          UserAns = prompt('Do you have a shop or personal used ?'); count++;
+           break;}
+        case 3:{
+          UserAns=prompt('Do you have another branches ?'); count++;
+            break;}
+        case 4:{
+          UserAns=prompt('Do you like the variants in our products ?'); count++;
+          break;}
+        case 4:{
+          UserAns=prompt('Do you have any comment to improve our business ?'); count++;
+          break;}    
+        default:{
+          console.log("Thanks for answer");
+            break;}
+    }
+  }}
 }
  
 
