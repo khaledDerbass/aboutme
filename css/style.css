@@ -5,8 +5,8 @@ body
 
 
 div#navbar
-{ margin-left: 5%;
-margin-bottom: 10%;
+{ 
+margin-top: 5%;
 border-left: hidden; border-right: hidden;
 position:relative; width: 100%;
 }
@@ -15,13 +15,25 @@ div#navbar ul li
 {
  border-top: hidden;
 border-bottom: hidden;
-margin-right: 2em; width: 25%; float: left;  margin-left: 5.5%;
+margin-right: 2em; width: 100%; float: left;  
 }
 div#navbar ul li a {text-decoration: none;
-display: block; padding: 0.5em;}
+display: block; padding: 1em;}
 
+main {
+  display: block;
+  background-color: lavender;
+  padding: 50px;
+}
+header {
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+}
 footer{
-    
+  margin-top: 13%; 
   text-align: center;
   display: block;
+  background-color: cadetblue;
 }
