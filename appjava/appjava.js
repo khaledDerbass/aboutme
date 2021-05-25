@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 let userName=prompt('Enter your name, pLease!');
         console.log("Greeting, "+userName+" you are welcome!");
 let count=0;
@@ -147,7 +147,6 @@ function correctAnswer(UserAns)
   }}
 }
  */
-document.write(RateMe());
 function RateMe()
 {
   let stars = prompt(userName+' Give us rating 1-5, please !');
