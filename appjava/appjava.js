@@ -3,10 +3,10 @@
 let userName=prompt('Enter your name, Please');
 console.log("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
 
-        let userVisit=prompt('Do you think that I love programming ?');
-        console.log("Please answer with only (Y/YES)");
+let userVisit=prompt('Do you think that I love programming ?');
+console.log("Please answer with only (Y/YES)");
 
-        userVisit=userVisit.toUpperCase();
+userVisit=userVisit.toUpperCase();
 
 switch (userVisit) {
   case 'Y':
@@ -215,8 +215,9 @@ else
 }
 */
 
+let TopTen=['The Godfather Part I','The Godfather Part II','Dog Day Afternoon','Serpico','The Panic in Needle Park','Carlito’s Way','The Irishman','Scarface','Glengarry Glen Ross','Scarecrow' ];
 
-document.write(RateMe());
+document.write(TopTen);
 
 /*
 function correctAnswer(UserAns)
@@ -254,9 +255,11 @@ function correctAnswer(UserAns)
     }
   }}
 }
- */
+ 
+
 function RateMe()
 {
+  /*
   let stars = prompt(userName+' Give us rating 1-5, please !');
   if (stars >= 5)
   stars = 5;
@@ -266,5 +269,8 @@ function RateMe()
   for (let i = 0; i < stars; i++) 
   starResults += '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDvvIxXy4-x8TSIlWn-znOZirHvrsErjpxQw&usqp=CAU" width="50px">';
 
+
+let starResults=['The Godfather Part I','The Godfather Part II','Dog Day Afternoon','Serpico','The Panic in Needle Park','Carlito’s Way','The Irishman','Scarface','Glengarry Glen Ross','Scarecrow' ];
+
   return starResults;
-}
+}*/
