@@ -227,37 +227,40 @@ question5();
 
 
 /////////////////////////////////
-var flag=0;
-var guessNum=prompt('Guess a random number between 1-10');
-console.log("The number is 5");
-
-
-for (var x=1;x<=4 && flag == 0;x++){
-  if (guessNum == 5)
-    {
-      alert('Thanks for answering correctly');
-      flag=1;          
-      score++;
-    }
-  else if (guessNum >= 0 && guessNum <5)
-    {
-      guessNum=prompt("Too low, Try again please.");
-    }
-          
-      
-  else if (guessNum > 5 && guessNum <=10){
-    guessNum=prompt("Too High, Try again please. ");
-  }
-    
+function question6()
+{var flag=0;
+  var guessNum=prompt('Guess a random number between 1-10');
+  console.log("The number is 5");
   
-  else
-    {
-      guessNum=prompt("Please adhere to the RANGE of numbers {1,2,3....10} ");
+  
+  for (var x=1;x<=4 && flag == 0;x++){
+    if (guessNum == 5)
+      {
+        alert('Thanks for answering correctly');
+        flag=1;          
+        score++;
+      }
+    else if (guessNum >= 0 && guessNum <5)
+      {
+        guessNum=prompt("Too low, Try again please.");
+      }
+            
+        
+    else if (guessNum > 5 && guessNum <=10){
+      guessNum=prompt("Too High, Try again please. ");
     }
-}
-console.log("The number is 5 with "+x+" number of attempts");
-
-
+      
+    
+    else
+      {
+        guessNum=prompt("Please adhere to the RANGE of numbers {1,2,3....10} ");
+      }
+  }
+  console.log("The number is 5 with "+x+" number of attempts");
+  
+  }
+  question6();
+  
 ///////////////////////////////////
 
 function question7()
