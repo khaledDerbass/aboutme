@@ -123,7 +123,7 @@ switch (branch) {
     }
   }
   question3();
-  
+
 
 /*if (branch.toUpperCase() == 'Y' || branch.toUpperCase() == 'N' || branch.toUpperCase() == 'YES' || branch.toUpperCase() == 'NO')
 {
@@ -143,7 +143,8 @@ else
         alert("CONGRATS, Thanks for answering");
 }*/
 
-let feed=prompt('Do you know my Full Name ?');
+function question4()
+{let feed=prompt('Do you know my Full Name ?');
 console.log("Please answer with only (Y/YES)");
 feed=feed.toUpperCase();
 
@@ -169,6 +170,9 @@ switch (feed) {
     break;
   }
 }
+}
+question4();
+
 //correctAnswer(feed);      
 
 /*
