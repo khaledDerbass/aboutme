@@ -71,7 +71,7 @@ switch (type) {
     }
   }
   question2();
-  
+
 /*
 //correctAnswer(type);
 if (type.toUpperCase() == 'NO' || type.toUpperCase() == 'N' || type.toUpperCase() == 'YES' || type.toUpperCase() == 'NO')
@@ -93,7 +93,8 @@ else
 
 }*/
 
-let branch=prompt('Do you think that i\'m in love with the HomeMade food ?');
+function question3()
+{let branch=prompt('Do you think that i\'m in love with the HomeMade food ?');
 branch=branch.toUpperCase();
 console.log("Please answer with only (N/NO)");
 
@@ -120,6 +121,10 @@ switch (branch) {
       break;
   }
     }
+  }
+  question3();
+  
+
 /*if (branch.toUpperCase() == 'Y' || branch.toUpperCase() == 'N' || branch.toUpperCase() == 'YES' || branch.toUpperCase() == 'NO')
 {
 
