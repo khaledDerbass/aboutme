@@ -1,33 +1,68 @@
 'use strict';
 
-let userName=prompt('Enter your name, pLease!');
-        console.log("Greeting, "+userName+" you are welcome!");
-let count=0;
-alert("Please answer the following Questions (y/n) or (yes/no)");
+let userName=prompt('Enter your name, Please');
+console.log("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
 
+        let userVisit=prompt('Do you think that I love programming ?');
+        console.log("Please answer with only (Y/YES)");
 
-let userVisit=prompt('Is it the first time you visit us ?');
+        userVisit=userVisit.toUpperCase();
+
+switch (userVisit) {
+  case 'Y':
+  case 'YES':{
+      alert('Thanks for answering correctly');
+      break;
+    }
+  case 'N':
+  case'NO':{
+    alert("Please adhere to the answers found in the CONSOLE");
+          break;}
+  default:{
+    alert("Please adhere to the answers found in the CONSOLE");
+    break;}
+    }
+
 //correctAnswer(userVisit);
-if (userVisit.toUpperCase() == 'Y' || userVisit.toUpperCase() == 'N' || userVisit.toUpperCase() == 'YES' || userVisit.toUpperCase() == 'NO')
+/*
+if (userVisit.toUpperCase() == 'Y' || userVisit.toUpperCase() == 'YES')
 {
 
-    console.log("Thanks for answering");
     alert("Thanks for answering");
-  
 }
 else
 {
-        while (!(userVisit.toUpperCase() == 'Y' || userVisit.toUpperCase() == 'N' || userVisit.toUpperCase() == 'YES' || userVisit.toUpperCase() == 'NO'))
+        while (!(userVisit.toUpperCase() == 'Y' || userVisit.toUpperCase() == 'YES'))
         {
-          alert("Please type your answer with ** (y/n) or (yes/no) ** options ONLY");
-          userVisit=prompt('Is it the first time you visit us ?');
+          alert("Please type your answer with ** (Y/YES)** options ONLY");
+          userVisit=prompt('Do you think that I love programming ?');
         }
-        console.log("Thanks for answering");
         alert("CONGRATS, Thanks for answering");
 }
-let type = prompt('Do you have a shop or personal used ?');
+*/
+let type = prompt('Do you know me from a long time ?');
+console.log("Please answer with only (N/NO)");
+type=type.toUpperCase();
+
+switch (type) {
+  case 'Y':
+  case 'YES':{
+    alert("Please adhere to the answers found in the CONSOLE");
+          break;}
+      
+  case 'N':
+  case'NO':
+  {
+  console.log('Thanks for answering correctly');
+      break;
+  }
+  default:{
+    alert("Please adhere to the answers found in the CONSOLE");
+    break;}
+    }
+/*
 //correctAnswer(type);
-if (type.toUpperCase() == 'Y' || type.toUpperCase() == 'N' || type.toUpperCase() == 'YES' || type.toUpperCase() == 'NO')
+if (type.toUpperCase() == 'NO' || type.toUpperCase() == 'N' || type.toUpperCase() == 'YES' || type.toUpperCase() == 'NO')
 {
 
     console.log("Thanks for answering");
@@ -44,10 +79,32 @@ else
         console.log("Thanks for answering");
         alert("CONGRATS, Thanks for answering");
 
-}
+}*/
 
-let branch=prompt('Do you have another branches ?');
-if (branch.toUpperCase() == 'Y' || branch.toUpperCase() == 'N' || branch.toUpperCase() == 'YES' || branch.toUpperCase() == 'NO')
+let branch=prompt('Do you think this E-Commercial shop wil success ?');
+branch=branch.toUpperCase();
+switch (branch) {
+  case 'Y':
+  case 'YES':
+    {
+      alert("Please adhere to the answers found in the CONSOLE");
+            break;
+          }
+    
+  case 'N':
+  case'NO':
+  {
+    console.log('Thanks for answering correctly');
+        break;
+    }
+    
+  default:
+    {
+      alert("Please adhere to the answers found in the CONSOLE");
+      break;
+  }
+    }
+/*if (branch.toUpperCase() == 'Y' || branch.toUpperCase() == 'N' || branch.toUpperCase() == 'YES' || branch.toUpperCase() == 'NO')
 {
 
     console.log("Thanks for answering");
@@ -63,10 +120,35 @@ else
         }
         console.log("Thanks for answering");
         alert("CONGRATS, Thanks for answering");
-}
+}*/
 
-let feed=prompt('Do you like the variants in our products ?');
+let feed=prompt('Do you know the name of the developer of this page ?');
+console.log("Please answer with only (Y/YES)");
+feed=feed.toUpperCase();
+
+switch (feed) {
+  case 'Y':
+  case 'YES':
+    {
+     alert('Thanks for answering correctly');
+          break;
+      }
+      
+  case 'N':
+  case'NO':
+  {
+    alert("Please adhere to the answers found in the CONSOLE");
+          break;
+        }
+  default:
+    {
+    alert("Please adhere to the answers found in the CONSOLE");
+    break;
+  }
+}
 //correctAnswer(feed);      
+
+/*
 if (feed.toUpperCase() == 'Y' || feed.toUpperCase() == 'N' || feed.toUpperCase() == 'YES' || feed.toUpperCase() == 'NO')
 {
 
@@ -84,10 +166,36 @@ else
         console.log("Thanks for answering");
         alert("CONGRATS, Thanks for answering");
 }
+*/
+
+let feedback=prompt('Do you know that i love swimming');
+console.log("Please answer with only (N/NO)");
+feedback=feedback.toUpperCase();
 
 
-let feedback=prompt('Do you have any comment to improve our business ?');
+switch (feedback) {
+  case 'Y':
+  case 'YES':
+    {
+      alert("Please adhere to the answers found in the CONSOLE");
+            break;}
+          
+      
+  case 'N':
+  case'NO':{
+    alert('Thanks for answering correctly');
+        break;}
+    
+  
+  default:
+    {
+      alert("Please adhere to the answers found in the CONSOLE");
+      break;}
+  
+}
+
 //correctAnswer(feedback);
+/*
 if (feedback.toUpperCase() == 'Y' || feedback.toUpperCase() == 'N' || feedback.toUpperCase() == 'YES' || feedback.toUpperCase() == 'NO')
 {
 
@@ -105,7 +213,7 @@ else
         console.log("Thanks for answering");
         alert("CONGRATS, Thanks for answering");
 }
-
+*/
 
 
 document.write(RateMe());
