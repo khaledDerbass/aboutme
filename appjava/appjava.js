@@ -45,7 +45,8 @@ else
         alert("CONGRATS, Thanks for answering");
 }
 */
-let type = prompt('Do you know what i studied before ?');
+function question2()
+{let type = prompt('Do you know what i studied before ?');
 console.log("Please answer with only (N/NO)");
 type=type.toUpperCase();
 
@@ -68,6 +69,9 @@ switch (type) {
     console.log("Please adhere to the answers found in the CONSOLE (N/NO)");
     break;}
     }
+  }
+  question2();
+  
 /*
 //correctAnswer(type);
 if (type.toUpperCase() == 'NO' || type.toUpperCase() == 'N' || type.toUpperCase() == 'YES' || type.toUpperCase() == 'NO')
