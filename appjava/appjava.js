@@ -194,8 +194,8 @@ else
         alert("CONGRATS, Thanks for answering");
 }
 */
-
-let feedback=prompt('Do you think that i love swimming');
+function question5()
+{let feedback=prompt('Do you think that i love swimming');
 console.log("Please answer with only (N/NO)");
 feedback=feedback.toUpperCase();
 
@@ -221,6 +221,11 @@ switch (feedback) {
       break;}
   
 }
+}
+question5();
+
+
+
 /////////////////////////////////
 var flag=0;
 var guessNum=prompt('Guess a random number between 1-10');
