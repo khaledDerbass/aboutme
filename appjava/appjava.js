@@ -19,7 +19,7 @@ switch (userVisit) {
     alert("Please adhere to the answers found in the CONSOLE");
           break;}
   default:{
-    alert("Please adhere to the answers found in the CONSOLE");
+    alert("Please adhere to the answers found in the CONSOLE (Y/YES)");
     break;}
     }
 
@@ -57,7 +57,7 @@ switch (type) {
       break;
   }
   default:{
-    alert("Please adhere to the answers found in the CONSOLE");
+    alert("Please adhere to the answers found in the CONSOLE (N/NO)");
     break;}
     }
 /*
@@ -100,7 +100,7 @@ switch (branch) {
     
   default:
     {
-      alert("Please adhere to the answers found in the CONSOLE");
+      alert("Please adhere to the answers found in the CONSOLE (Y/YES)");
       break;
   }
     }
@@ -142,7 +142,7 @@ switch (feed) {
         }
   default:
     {
-    alert("Please adhere to the answers found in the CONSOLE");
+    alert("Please adhere to the answers found in the CONSOLE (Y/YES)");
     break;
   }
 }
@@ -189,12 +189,47 @@ switch (feedback) {
   
   default:
     {
-      alert("Please adhere to the answers found in the CONSOLE");
+      alert("Please adhere to the answers found in the CONSOLE (N/NO)");
       break;}
   
 }
 
-//correctAnswer(feedback);
+var flag=0;
+var guessNum=prompt('Guess a random number between 1-10');
+console.log("The number is 5");
+
+
+for (let x=1;x<=4 && flag == 0;x++){
+  if (guessNum == 5)
+    {
+      alert('Thanks for answering correctly');
+      flag=1;          
+    }
+  else if (guessNum >= 0 && guessNum <5)
+    {
+      guessNum=prompt("Too low, Try again please.");
+    }
+          
+      
+  else if (guessNum > 5 && guessNum <=10){
+    guessNum=prompt("Too High, Try again please. ");
+  }
+    
+  
+  else
+    {
+      alert("Please adhere to the RANGE {1,2,3....10} ");
+    }
+}
+console.log("The number is 5 with "+x+" number of attempts");
+
+
+let TopTen=['The Godfather Part I','The Godfather Part II','Dog Day Afternoon','Serpico','The Panic in Needle Park','Carlito’s Way','The Irishman','Scarface','Glengarry Glen Ross','Scarecrow' ];
+for (let x=0;x<TopTen.length;x++)
+{
+  document.write(TopTen[x]);
+}
+  //correctAnswer(feedback);
 /*
 if (feedback.toUpperCase() == 'Y' || feedback.toUpperCase() == 'N' || feedback.toUpperCase() == 'YES' || feedback.toUpperCase() == 'NO')
 {
@@ -215,9 +250,7 @@ else
 }
 */
 
-let TopTen=['The Godfather Part I','The Godfather Part II','Dog Day Afternoon','Serpico','The Panic in Needle Park','Carlito’s Way','The Irishman','Scarface','Glengarry Glen Ross','Scarecrow' ];
 
-document.write(TopTen);
 
 /*
 function correctAnswer(UserAns)
