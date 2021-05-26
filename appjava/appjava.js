@@ -1,28 +1,32 @@
 'use strict';
-var score=0;
-let userName=prompt('Enter your name, Please');
-console.log("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
-
-let userVisit=prompt('Do you think that I love programming ?');
-console.log("Please answer with only (Y/YES)");
-
-userVisit=userVisit.toUpperCase();
-
-switch (userVisit) {
-  case 'Y':
-  case 'YES':{
-      alert('Thanks for answering correctly');
-      score++;
-      break;
-    }
-  case 'N':
-  case'NO':{
-    console.log("Please adhere to the answers found in the CONSOLE");
-          break;}
-  default:{
-    console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
-    break;}
-    }
+function question1()
+{var score=0;
+  let userName=prompt('Enter your name, Please');
+  console.log("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
+  
+  let userVisit=prompt('Do you think that I love programming ?');
+  console.log("Please answer with only (Y/YES)");
+  
+  userVisit=userVisit.toUpperCase();
+  
+  switch (userVisit) {
+    case 'Y':
+    case 'YES':{
+        alert('Thanks for answering correctly');
+        score++;
+        break;
+      }
+    case 'N':
+    case'NO':{
+      console.log("Please adhere to the answers found in the CONSOLE");
+            break;}
+    default:{
+      console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
+      break;}
+      }
+    
+  }
+question1();
 
 //correctAnswer(userVisit);
 /*
