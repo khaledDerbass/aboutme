@@ -1,28 +1,32 @@
 'use strict';
-var score=0;
-let userName=prompt('Enter your name, Please');
-console.log("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
-
-let userVisit=prompt('Do you think that I love programming ?');
-console.log("Please answer with only (Y/YES)");
-
-userVisit=userVisit.toUpperCase();
-
-switch (userVisit) {
-  case 'Y':
-  case 'YES':{
-      alert('Thanks for answering correctly');
-      score++;
-      break;
-    }
-  case 'N':
-  case'NO':{
-    console.log("Please adhere to the answers found in the CONSOLE");
-          break;}
-  default:{
-    console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
-    break;}
-    }
+function question1()
+{var score=0;
+  let userName=prompt('Enter your name, Please');
+  console.log("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
+  
+  let userVisit=prompt('Do you think that I love programming ?');
+  console.log("Please answer with only (Y/YES)");
+  
+  userVisit=userVisit.toUpperCase();
+  
+  switch (userVisit) {
+    case 'Y':
+    case 'YES':{
+        alert('Thanks for answering correctly');
+        score++;
+        break;
+      }
+    case 'N':
+    case'NO':{
+      console.log("Please adhere to the answers found in the CONSOLE");
+            break;}
+    default:{
+      console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
+      break;}
+      }
+    
+  }
+question1();
 
 //correctAnswer(userVisit);
 /*
@@ -41,7 +45,8 @@ else
         alert("CONGRATS, Thanks for answering");
 }
 */
-let type = prompt('Do you know what i studied before ?');
+function question2()
+{let type = prompt('Do you know what i studied before ?');
 console.log("Please answer with only (N/NO)");
 type=type.toUpperCase();
 
@@ -64,6 +69,9 @@ switch (type) {
     console.log("Please adhere to the answers found in the CONSOLE (N/NO)");
     break;}
     }
+  }
+  question2();
+
 /*
 //correctAnswer(type);
 if (type.toUpperCase() == 'NO' || type.toUpperCase() == 'N' || type.toUpperCase() == 'YES' || type.toUpperCase() == 'NO')
@@ -85,7 +93,8 @@ else
 
 }*/
 
-let branch=prompt('Do you think that i\'m in love with the HomeMade food ?');
+function question3()
+{let branch=prompt('Do you think that i\'m in love with the HomeMade food ?');
 branch=branch.toUpperCase();
 console.log("Please answer with only (N/NO)");
 
@@ -112,6 +121,10 @@ switch (branch) {
       break;
   }
     }
+  }
+  question3();
+
+
 /*if (branch.toUpperCase() == 'Y' || branch.toUpperCase() == 'N' || branch.toUpperCase() == 'YES' || branch.toUpperCase() == 'NO')
 {
 
@@ -130,7 +143,8 @@ else
         alert("CONGRATS, Thanks for answering");
 }*/
 
-let feed=prompt('Do you know my Full Name ?');
+function question4()
+{let feed=prompt('Do you know my Full Name ?');
 console.log("Please answer with only (Y/YES)");
 feed=feed.toUpperCase();
 
@@ -156,6 +170,9 @@ switch (feed) {
     break;
   }
 }
+}
+question4();
+
 //correctAnswer(feed);      
 
 /*
@@ -177,8 +194,8 @@ else
         alert("CONGRATS, Thanks for answering");
 }
 */
-
-let feedback=prompt('Do you think that i love swimming');
+function question5()
+{let feedback=prompt('Do you think that i love swimming');
 console.log("Please answer with only (N/NO)");
 feedback=feedback.toUpperCase();
 
@@ -204,67 +221,79 @@ switch (feedback) {
       break;}
   
 }
-/////////////////////////////////
-var flag=0;
-var guessNum=prompt('Guess a random number between 1-10');
-console.log("The number is 5");
-
-
-for (var x=1;x<=4 && flag == 0;x++){
-  if (guessNum == 5)
-    {
-      alert('Thanks for answering correctly');
-      flag=1;          
-      score++;
-    }
-  else if (guessNum >= 0 && guessNum <5)
-    {
-      guessNum=prompt("Too low, Try again please.");
-    }
-          
-      
-  else if (guessNum > 5 && guessNum <=10){
-    guessNum=prompt("Too High, Try again please. ");
-  }
-    
-  
-  else
-    {
-      guessNum=prompt("Please adhere to the RANGE of numbers {1,2,3....10} ");
-    }
 }
-console.log("The number is 5 with "+x+" number of attempts");
+question5();
 
 
+
+/////////////////////////////////
+function question6()
+{var flag=0;
+  var guessNum=prompt('Guess a random number between 1-10');
+  console.log("The number is 5");
+  
+  
+  for (var x=1;x<=4 && flag == 0;x++){
+    if (guessNum == 5)
+      {
+        alert('Thanks for answering correctly');
+        flag=1;          
+        score++;
+      }
+    else if (guessNum >= 0 && guessNum <5)
+      {
+        guessNum=prompt("Too low, Try again please.");
+      }
+            
+        
+    else if (guessNum > 5 && guessNum <=10){
+      guessNum=prompt("Too High, Try again please. ");
+    }
+      
+    
+    else
+      {
+        guessNum=prompt("Please adhere to the RANGE of numbers {1,2,3....10} ");
+      }
+  }
+  console.log("The number is 5 with "+x+" number of attempts");
+  
+  }
+  question6();
+  
 ///////////////////////////////////
 
-
-var flag2=0;
-var guessNum2=[1,2,3,4,5,6,7,8,9,10];
-
-console.log("The numbers you can choose are 1 OR 5 OR 10");
-
-for (var j=0; j<6 ;j++)
-{
-  var Guess=prompt('Guess a random number between 1-10');
+function question7()
+{var flag2=0;
+  var guessNum2=[1,2,3,4,5,6,7,8,9,10];
   
-  for (var x=0; x<guessNum2.length; x++)
+  console.log("The numbers you can choose are 1 OR 5 OR 10");
+  
+  for (var j=0; j<6 ;j++)
   {
-    if (guessNum2[x] == Guess)
+    var Guess=prompt('Guess a random number between 1-10');
+    
+    for (var x=0; x<guessNum2.length; x++)
     {
-      alert('Congrats you got it right!');
-      j=6;
-      score++;
-      break;          
+      
+      if ( Guess == 1 || Guess == 5 || Guess == 10)
+      {
+        alert('Congrats you got it right!');
+        j=6;
+        score++;
+        break;          
+      }
     }
-  }
-  if (j !== 6)
-    {
-      alert('Sorry, wrong answer. try again');
-    }
+       if (j !== 6)
+      {
+        alert('Sorry, wrong answer. try again');
+      }
+    
   
-
+  }
 }
+question7();
+
 
 
 console.log("you have tried "+x+" times");
