@@ -238,33 +238,37 @@ console.log("The number is 5 with "+x+" number of attempts");
 
 ///////////////////////////////////
 
-
-var flag2=0;
-var guessNum2=[1,2,3,4,5,6,7,8,9,10];
-
-console.log("The numbers you can choose are 1 OR 5 OR 10");
-
-for (var j=0; j<6 ;j++)
-{
-  var Guess=prompt('Guess a random number between 1-10');
+function question7()
+{var flag2=0;
+  var guessNum2=[1,2,3,4,5,6,7,8,9,10];
   
-  for (var x=0; x<guessNum2.length; x++)
+  console.log("The numbers you can choose are 1 OR 5 OR 10");
+  
+  for (var j=0; j<6 ;j++)
   {
-    if (guessNum2[x] == Guess)
+    var Guess=prompt('Guess a random number between 1-10');
+    
+    for (var x=0; x<guessNum2.length; x++)
     {
-      alert('Congrats you got it right!');
-      j=6;
-      score++;
-      break;          
+      
+      if ( Guess == 1 || Guess == 5 || Guess == 10)
+      {
+        alert('Congrats you got it right!');
+        j=6;
+        score++;
+        break;          
+      }
     }
-  }
-  if (j !== 6)
-    {
-      alert('Sorry, wrong answer. try again');
-    }
+       if (j !== 6)
+      {
+        alert('Sorry, wrong answer. try again');
+      }
+    
   
-
+  }
 }
+question7();
+
 
 
 console.log("you have tried "+x+" times");
