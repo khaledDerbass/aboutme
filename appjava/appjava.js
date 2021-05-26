@@ -1,5 +1,5 @@
 'use strict';
-
+var score=0;
 let userName=prompt('Enter your name, Please');
 console.log("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
 
@@ -12,14 +12,15 @@ switch (userVisit) {
   case 'Y':
   case 'YES':{
       alert('Thanks for answering correctly');
+      score++;
       break;
     }
   case 'N':
   case'NO':{
-    alert("Please adhere to the answers found in the CONSOLE");
+    console.log("Please adhere to the answers found in the CONSOLE");
           break;}
   default:{
-    alert("Please adhere to the answers found in the CONSOLE (Y/YES)");
+    console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
     break;}
     }
 
@@ -40,24 +41,27 @@ else
         alert("CONGRATS, Thanks for answering");
 }
 */
-let type = prompt('Do you know me from a long time ?');
+let type = prompt('Do you know what i studied before ?');
 console.log("Please answer with only (N/NO)");
 type=type.toUpperCase();
 
 switch (type) {
   case 'Y':
   case 'YES':{
-    alert("Please adhere to the answers found in the CONSOLE");
+    console.log("Please adhere to the answers found in the CONSOLE");
           break;}
       
   case 'N':
   case'NO':
   {
-  console.log('Thanks for answering correctly');
+    alert('Thanks for answering correctly');
+    score++;
+
       break;
+      
   }
   default:{
-    alert("Please adhere to the answers found in the CONSOLE (N/NO)");
+    console.log("Please adhere to the answers found in the CONSOLE (N/NO)");
     break;}
     }
 /*
@@ -81,26 +85,30 @@ else
 
 }*/
 
-let branch=prompt('Do you think this E-Commercial shop wil success ?');
+let branch=prompt('Do you think that i\'m in love with the HomeMade food ?');
 branch=branch.toUpperCase();
+console.log("Please answer with only (N/NO)");
+
 switch (branch) {
   case 'Y':
   case 'YES':
     {
-      alert("Please adhere to the answers found in the CONSOLE");
+      console.log("Please adhere to the answers found in the CONSOLE");
             break;
           }
     
   case 'N':
   case'NO':
   {
-    console.log('Thanks for answering correctly');
+    alert('Thanks for answering correctly');
+    score++;
+
         break;
     }
     
   default:
     {
-      alert("Please adhere to the answers found in the CONSOLE (Y/YES)");
+      console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
       break;
   }
     }
@@ -122,7 +130,7 @@ else
         alert("CONGRATS, Thanks for answering");
 }*/
 
-let feed=prompt('Do you know the name of the developer of this page ?');
+let feed=prompt('Do you know my Full Name ?');
 console.log("Please answer with only (Y/YES)");
 feed=feed.toUpperCase();
 
@@ -131,18 +139,20 @@ switch (feed) {
   case 'YES':
     {
      alert('Thanks for answering correctly');
+     score++;
+
           break;
       }
       
   case 'N':
   case'NO':
   {
-    alert("Please adhere to the answers found in the CONSOLE");
+    console.log("Please adhere to the answers found in the CONSOLE");
           break;
         }
   default:
     {
-    alert("Please adhere to the answers found in the CONSOLE (Y/YES)");
+      console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
     break;
   }
 }
@@ -168,7 +178,7 @@ else
 }
 */
 
-let feedback=prompt('Do you know that i love swimming');
+let feedback=prompt('Do you think that i love swimming');
 console.log("Please answer with only (N/NO)");
 feedback=feedback.toUpperCase();
 
@@ -177,33 +187,35 @@ switch (feedback) {
   case 'Y':
   case 'YES':
     {
-      alert("Please adhere to the answers found in the CONSOLE");
+      console.log("Please adhere to the answers found in the CONSOLE");
             break;}
           
       
   case 'N':
   case'NO':{
     alert('Thanks for answering correctly');
+    score++;
         break;}
     
   
   default:
     {
-      alert("Please adhere to the answers found in the CONSOLE (N/NO)");
+      console.log("Please adhere to the answers found in the CONSOLE (N/NO)");
       break;}
   
 }
-
+/////////////////////////////////
 var flag=0;
 var guessNum=prompt('Guess a random number between 1-10');
 console.log("The number is 5");
 
 
-for (let x=1;x<=4 && flag == 0;x++){
+for (var x=1;x<=4 && flag == 0;x++){
   if (guessNum == 5)
     {
       alert('Thanks for answering correctly');
       flag=1;          
+      score++;
     }
   else if (guessNum >= 0 && guessNum <5)
     {
@@ -218,17 +230,51 @@ for (let x=1;x<=4 && flag == 0;x++){
   
   else
     {
-      alert("Please adhere to the RANGE {1,2,3....10} ");
+      guessNum=prompt("Please adhere to the RANGE of numbers {1,2,3....10} ");
     }
 }
 console.log("The number is 5 with "+x+" number of attempts");
 
 
-let TopTen=['The Godfather Part I','The Godfather Part II','Dog Day Afternoon','Serpico','The Panic in Needle Park','Carlito’s Way','The Irishman','Scarface','Glengarry Glen Ross','Scarecrow' ];
+///////////////////////////////////
+
+
+var flag2=0;
+var guessNum2=[1,2,3,4,5,6,7,8,9,10];
+
+console.log("The numbers you can choose are 1 OR 5 OR 10");
+
+for (var j=0; j<6 ;j++)
+{
+  var Guess=prompt('Guess a random number between 1-10');
+  
+  for (var x=0; x<guessNum2.length; x++)
+  {
+    if (guessNum2[x] == Guess)
+    {
+      alert('Congrats you got it right!');
+      j=6;
+      score++;
+      break;          
+    }
+  }
+  if (j !== 6)
+    {
+      alert('Sorry, wrong answer. try again');
+    }
+  
+
+}
+
+
+console.log("you have tried "+x+" times");
+alert(' You got ' + score + ' correct answers!');
+let TopTen=['1- The Godfather Part I. ','2- The Godfather Part II. ','3- Dog Day Afternoon. ','4- Serpico.  ','5- The Panic in Needle Park. ','6- Carlito’s Way.  ','7- The Irishman. ','8- Scarface. ','9- Glengarry Glen Ross.  ','10- Scarecrow.' ];
 for (let x=0;x<TopTen.length;x++)
 {
-  document.write(TopTen[x]);
+  document.write(TopTen[x]+"          ");  
 }
+///////////////////////////
   //correctAnswer(feedback);
 /*
 if (feedback.toUpperCase() == 'Y' || feedback.toUpperCase() == 'N' || feedback.toUpperCase() == 'YES' || feedback.toUpperCase() == 'NO')
