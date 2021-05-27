@@ -1,6 +1,7 @@
 'use strict';
 function question1()
-{var score=0;
+{
+  let marks=0;
   let userName=prompt('Enter your name, Please');
   console.log("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
   
@@ -13,7 +14,7 @@ function question1()
     case 'Y':
     case 'YES':{
         alert('Thanks for answering correctly');
-        score++;
+        marks++;
         break;
       }
     case 'N':
@@ -60,7 +61,7 @@ switch (type) {
   case'NO':
   {
     alert('Thanks for answering correctly');
-    score++;
+    marks++;
 
       break;
       
@@ -110,7 +111,7 @@ switch (branch) {
   case'NO':
   {
     alert('Thanks for answering correctly');
-    score++;
+    marks++;
 
         break;
     }
@@ -153,7 +154,7 @@ switch (feed) {
   case 'YES':
     {
      alert('Thanks for answering correctly');
-     score++;
+     marks++;
 
           break;
       }
@@ -187,7 +188,7 @@ else
         while (!(feed.toUpperCase() == 'Y' || feed.toUpperCase() == 'N' || feed.toUpperCase() == 'YES' || feed.toUpperCase() == 'NO'))
         {
           alert("Please type your answer with ** (y/n) or (yes/no) ** options ONLY");
-          feed=prompt('Do you like the variants in our products ?');
+          feed=prompt('Do you like the letiants in our products ?');
 
         }
         console.log("Thanks for answering");
@@ -211,7 +212,7 @@ switch (feedback) {
   case 'N':
   case'NO':{
     alert('Thanks for answering correctly');
-    score++;
+    marks++;
         break;}
     
   
@@ -228,17 +229,18 @@ question5();
 
 /////////////////////////////////
 function question6()
-{var flag=0;
-  var guessNum=prompt('Guess a random number between 1-10');
+{
+  let flag=0;
+  let guessNum=prompt('Q6: Guess a random number between 1-10');
   console.log("The number is 5");
   
   
-  for (var x=1;x<=4 && flag == 0;x++){
+  for (let x=1;x<=4 && flag == 0;x++){
     if (guessNum == 5)
       {
         alert('Thanks for answering correctly');
         flag=1;          
-        score++;
+        marks++;
       }
     else if (guessNum >= 0 && guessNum <5)
       {
@@ -263,24 +265,65 @@ function question6()
   
 ///////////////////////////////////
 
-function question7()
-{var flag2=0;
-  var guessNum2=[1,2,3,4,5,6,7,8,9,10];
+function ask7 ()
+{
+  let flag2=0;
+  //  let guess_Num2 = ['shirt', 'jeans', 'jacket', 'cap', 'short', 't-shirt','hoodie'];
+  let guess_Num2=[1,2,3,4,5,6,7,8,9,10];
+    console.log("The items you can choose are Jeans OR Shirt OR hoodie");
+    for (let i = 0; i < guess_Num2.length; i++) 
+    {
+        let userAns = prompt('Q7 : Can you guess my favorite item?');
+      //  userAns = userAns.toLowerCase();
+
+        for (let j = 0; j < guess_Num2.length; j++){
+            if (userAns == guess_Num2[j]) {
+                alert('Thanks for answering correctly');
+                marks++;
+                flag2=1;
+                break;
+            }
+        }
+        if (flag2 != 1)
+        alert('Sorry, wrong answer. try again');
+          
+    }
+     
+}
+ask7 ();
+
+
+
+alert(' You got ' + marks + ' correct answers!');
+
+
+let TopTen=['1- The Godfather Part I. ','2- The Godfather Part II. ','3- Dog Day Afternoon. ','4- Serpico.  ','5- The Panic in Needle Park. ','6- Carlito’s Way.  ','7- The Irishman. ','8- Scarface. ','9- Glengarry Glen Ross.  ','10- Scarecrow.' ];
+for (let x=0;x<TopTen.length;x++)
+{
+  document.write(TopTen[x]+"          ");  
+}
+
+
+
+
+
+  /*let flag2=0;
+  let guessNum2=[1,2,3,4,5,6,7,8,9,10];
   
   console.log("The numbers you can choose are 1 OR 5 OR 10");
   
-  for (var j=0; j<6 ;j++)
+  for (let j=0; j<6 ;j++)
   {
-    var Guess=prompt('Guess a random number between 1-10');
+    let Guess=prompt('Guess a random number between 1-10');
     
-    for (var x=0; x<guessNum2.length; x++)
+    for (let x=0; x<guessNum2.length; x++)
     {
       
       if ( Guess == 1 || Guess == 5 || Guess == 10)
       {
         alert('Congrats you got it right!');
         j=6;
-        score++;
+        marks++;
         break;          
       }
     }
@@ -291,40 +334,6 @@ function question7()
     
   
   }
-}
-question7();
-
-
-
-console.log("you have tried "+x+" times");
-alert(' You got ' + score + ' correct answers!');
-let TopTen=['1- The Godfather Part I. ','2- The Godfather Part II. ','3- Dog Day Afternoon. ','4- Serpico.  ','5- The Panic in Needle Park. ','6- Carlito’s Way.  ','7- The Irishman. ','8- Scarface. ','9- Glengarry Glen Ross.  ','10- Scarecrow.' ];
-for (let x=0;x<TopTen.length;x++)
-{
-  document.write(TopTen[x]+"          ");  
-}
-///////////////////////////
-  //correctAnswer(feedback);
-/*
-if (feedback.toUpperCase() == 'Y' || feedback.toUpperCase() == 'N' || feedback.toUpperCase() == 'YES' || feedback.toUpperCase() == 'NO')
-{
-
-    console.log("Thanks for answering");
-    alert("Thanks for answering");
-}
-else
-{
-        while (!(feedback.toUpperCase() == 'Y' || feedback.toUpperCase() == 'N' || feedback.toUpperCase() == 'YES' || feedback.toUpperCase() == 'NO'))
-        {
-          alert("Please type your answer with ** (y/n) or (yes/no) ** options ONLY");
-          feedback=prompt('Do you like the variants in our products ?');
-
-        }
-        console.log("Thanks for answering");
-        alert("CONGRATS, Thanks for answering");
-}
-*/
-
 
 
 /*
@@ -352,7 +361,7 @@ function correctAnswer(UserAns)
           UserAns=prompt('Do you have another branches ?'); count++;
             break;}
         case 4:{
-          UserAns=prompt('Do you like the variants in our products ?'); count++;
+          UserAns=prompt('Do you like the letiants in our products ?'); count++;
           break;}
         case 4:{
           UserAns=prompt('Do you have any comment to improve our business ?'); count++;
