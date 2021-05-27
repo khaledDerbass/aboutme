@@ -13,17 +13,18 @@ function question1()
   
   switch (userVisit) {
     case 'Y':
-    case 'YES':{
+    case 'YES':
+      {
         alert('Thanks for answering correctly');
         score++;
         break;
       }
     case 'N':
     case'NO':{
-      console.log("Please adhere to the answers found in the CONSOLE");
+      alert("answer with only (Y/YES)"); 
             break;}
     default:{
-      console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
+      alert("answer with only (Y/YES)"); 
       break;}
       }
     
@@ -38,8 +39,8 @@ type=type.toUpperCase();
 switch (type) {
   case 'Y':
   case 'YES':{
-    console.log("Please adhere to the answers found in the CONSOLE");
-          break;}
+    alert("answer with only (N/NO)"); 
+    break;}
       
   case 'N':
   case'NO':
@@ -51,7 +52,7 @@ switch (type) {
       
   }
   default:{
-    console.log("Please adhere to the answers found in the CONSOLE (N/NO)");
+    alert("Please adhere to the answers found in the CONSOLE (N/NO)");
     break;}
     }
   }
@@ -67,7 +68,8 @@ switch (branch) {
   case 'Y':
   case 'YES':
     {
-      console.log("Please adhere to the answers found in the CONSOLE");
+      alert("answer with only (N/NO)"); 
+
             break;
           }
     
@@ -82,7 +84,7 @@ switch (branch) {
     
   default:
     {
-      console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
+      alert("Please adhere to the answers found in the CONSOLE (Y/YES)");
       break;
   }
     }
@@ -110,12 +112,12 @@ switch (feed) {
   case 'N':
   case'NO':
   {
-    console.log("Please adhere to the answers found in the CONSOLE");
-          break;
+    alert("answer with only (Y/YES)"); 
+    break;
         }
   default:
     {
-      console.log("Please adhere to the answers found in the CONSOLE (Y/YES)");
+      alert("Please adhere to the answers found in the CONSOLE (Y/YES)");
     break;
   }
 }
@@ -135,7 +137,7 @@ switch (feedback) {
   case 'Y':
   case 'YES':
     {
-      console.log("Please adhere to the answers found in the CONSOLE");
+      alert("answer with only (N/NO)"); 
             break;}
           
       
@@ -148,7 +150,7 @@ switch (feedback) {
   
   default:
     {
-      console.log("Please adhere to the answers found in the CONSOLE (N/NO)");
+      alert("Please adhere to the answers found in the CONSOLE (N/NO)");
       break;}
   
 }
@@ -173,18 +175,18 @@ function question6()
       }
     else if (guessNum >= 0 && guessNum <5)
       {
-        guessNum=prompt("Too low, Try again please.");
+        guessNum=prompt("Too low, Try again please. The number is 5");
       }
             
         
     else if (guessNum > 5 && guessNum <=10){
-      guessNum=prompt("Too High, Try again please. ");
+      guessNum=prompt("Too High, Try again please. The number is 5");
     }
       
     
     else
       {
-        guessNum=prompt("Please adhere to the RANGE of numbers {1,2,3....10} ");
+        guessNum=prompt("Please adhere to the RANGE of numbers {1,2,3....10}. The number is 5");
       }
   }
   console.log("The number is 5 with "+x+" number of attempts");
@@ -192,32 +194,30 @@ function question6()
   }
   question6();
   
-///////////////////////////////////
+/////////////////////////////////// if guess[1,5,10]
 
 function question7()
-{var flag2=0;
-  var guessNum2=[1,2,3,4,5,6,7,8,9,10];
+{
+  var count=0;
   
   console.log("The numbers you can choose are 1 OR 5 OR 10");
-  
-  for (var j=0; j<6 ;j++)
+  var guess_2=[1,5,10];
+  for (var j=0; j<6 && count == 0 ;j++)
   {
     var Guess=prompt('Q7: Guess a random number between 1-10');
     
-    for (var x=0; x<guessNum2.length; x++)
-    {
-      
-      if ( Guess == 1 || Guess == 5 || Guess == 10)
+    for (var x=0; x <= j; x++)    
+      if ( Guess == guess_2[x])
       {
         alert('Congrats you got it right!');
-        j=6;
+        count=1;
         score++;
         break;          
       }
-    }
-       if (j !== 6)
+    
+    if (count == 0)
       {
-        alert('Sorry, wrong answer. try again');
+        alert('Sorry, wrong answer. The numbers you can choose are 1 OR 5 OR 10');
       }
     
   
