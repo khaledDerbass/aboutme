@@ -1,5 +1,5 @@
 body
-{font-family: Arial; font-size: 1em;  color: black;margin-left:1%;  
+{font-family: Arial; font-size: 1em;  color: hsla(0, 0%, 18%, 0.877);margin-left:1%;  
     background-color:rgba(245, 245, 245, 0.856); border-color:white;
 }
 
@@ -18,7 +18,7 @@ border-bottom: hidden;
 margin-right: 2em; width: 100%; float: left;  
 }
 div#navbar ul li a {text-decoration: none;
-display: block; padding: 1em;}
+display: block; padding: 1em; text-align: center;text-shadow: .25;}
 
 div#navbar2
 { 
@@ -28,6 +28,7 @@ position:relative;  width:50%;
 div#navbar2 ul {list-style-type: none;}
 div#navbar2 ul li
 {
+  text-decoration: underline;
  border-top: hidden;
 border-bottom: hidden;
 margin-right: 2em; width: 100%; float: left; padding: 0.5em;  

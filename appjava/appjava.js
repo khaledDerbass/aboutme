@@ -4,10 +4,9 @@ let userName=prompt('Enter your name, Please');
 
 function question1()
 {
-  console.log("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
+     alert("Greeting, "+userName+" you are welcome, open the console pLease to answer the following questions!");
   
   let userVisit=prompt('Q1: Do you think that I love programming ?');
-  console.log("Please answer with only (Y/YES)");
   
   userVisit=userVisit.toUpperCase();
   
@@ -33,7 +32,7 @@ question1();
 
 function question2()
 {let type = prompt('Q2: Do you know what i studied before ?');
-console.log("Please answer with only (N/NO)");
+   ("Please answer with only (N/NO)");
 type=type.toUpperCase();
 
 switch (type) {
@@ -62,7 +61,6 @@ switch (type) {
 function question3()
 {let branch=prompt('Q3: Do you think that i\'m in love with the HomeMade food ?');
 branch=branch.toUpperCase();
-console.log("Please answer with only (N/NO)");
 
 switch (branch) {
   case 'Y':
@@ -96,7 +94,7 @@ switch (branch) {
 
 function question4()
 {let feed=prompt('Q4: Do you know my Full Name ?');
-console.log("Please answer with only (Y/YES)");
+   ("Please answer with only (Y/YES)");
 feed=feed.toUpperCase();
 
 switch (feed) {
@@ -129,8 +127,7 @@ question4();
 function question5()
 {
   let feedback=prompt('Q5: Do you think that i love swimming');
-console.log("Please answer with only (N/NO)");
-feedback=feedback.toUpperCase();
+    feedback=feedback.toUpperCase();
 
 
 switch (feedback) {
@@ -163,7 +160,7 @@ question5();
 function question6()
 {var flag=0;
   var guessNum=prompt('Q6: Guess a random number between 1-10');
-  console.log("The number is 5");
+     ("The number is 5");
   
   
   for (var x=1;x<=4 && flag == 0;x++){
@@ -189,7 +186,6 @@ function question6()
         guessNum=prompt("Please adhere to the RANGE of numbers {1,2,3....10}. The number is 5");
       }
   }
-  console.log("The number is 5 with "+x+" number of attempts");
   
   }
   question6();
@@ -200,7 +196,6 @@ function question7()
 {
   var count=0;
   
-  console.log("The numbers you can choose are 1 OR 5 OR 10");
   var guess_2=[1,5,10];
   for (var j=0; j<6 && count == 0 ;j++)
   {
